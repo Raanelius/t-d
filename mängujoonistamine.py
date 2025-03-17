@@ -1,4 +1,5 @@
 import pygame
+import sys
 pygame.init()
 
 #värvid
@@ -20,5 +21,10 @@ while not gameover:
     screen.blit(youWin,[180,100])
 
     pygame.display.flip()
+
+    #mängu sulgemine ristist
+    for i in pygame.event.get():
+       if i.type == pygame.QUIT:
+           sys.exit()
 
 pygame.quit()
